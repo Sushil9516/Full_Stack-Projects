@@ -1,0 +1,204 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;      /* This is additional by me*/
+  background: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #ca1b07c7;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.movie-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+/* Small Screens: 1 column */
+@media (max-width: 640px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem 2rem;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .movie-poster {
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    height: auto;
+  }
+
+  .movie-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #c42626;
+  }
+
+  .movie-date {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: #b65757;
+
+  }
+
+  .btn {
+    width: 120px;
+  }
+}
+
+/* Medium Screens: 2 columns */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .container {
+    padding: 1rem 4rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem 3rem;
+    align-items: center;
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .movie-info{
+font-family: 'Dancing Script', cursive;
+  }
+
+  .movie-poster {
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    height: auto;
+  }
+
+  .movie-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #9e4c4c;
+  }
+
+  .movie-date {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: #9b6969;
+  }
+
+  .btn {
+    width: 120px;
+  }
+}
+
+/* Large Screens: 2 columns, horizontal card */
+@media (min-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .movie-poster {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
+    border-radius: 12px;
+    height: auto;
+  }
+
+  .movie-info {
+    width: 60%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .movie-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #466d94;
+  }
+
+  .movie-date {
+    font-size: 1rem;
+    color: #6c8197;
+  }
+
+  .btn {
+    width: 120px;
+  }
+}
+
+/* Button */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-book {
+  background-color: #e74c3c;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-book:hover {
+  background-color: #c0392b;
+}

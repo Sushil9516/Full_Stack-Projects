@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #fafafa;
+  color: #222;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.topbar {
+  background: #fff;
+  padding: 1rem 0;
+}
+
+.topbar .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand img {
+  height: 90px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.reg-btn, .login-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  transition: 0.3s ease;
+}
+
+.reg-btn {
+  background-color: #f3f3f3;
+  color: #555;
+}
+
+.reg-btn:hover {
+  background-color: #0e76a8;
+  color: #fff;
+}
+
+.login-btn {
+  background-color: rgba(14, 119, 168, 0.8);
+  color: #fff;
+}
+
+.login-btn:hover {
+  background-color: #0e76a8;
+}
+
+.hero-section {
+  padding: 3rem 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.login-box {
+  max-width: 500px;
+}
+
+.login-box h1 {
+  font-size: 2.7rem;
+  font-weight: 300;
+  color: #630000;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 1rem;
+}
+
+.input-field {
+  border: 1px solid #aaa;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-field input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.toggle-icon {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.forgot-link {
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.login-btn.full {
+  background-color: #0e76a8;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.login-btn.full:hover {
+  background-color: #074761;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  background: #ccc;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  padding: 0 1rem;
+  background: #fafafa;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+}
+
+.policy-text {
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.policy-text a {
+  color: #0e76a8;
+  font-weight: 500;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #aaa;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  background: #f7f7f7;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #111;
+  color: #fff;
+  border-color: #fff;
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+.google-btn span {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.google-btn:hover span {
+  color: #fff;
+}
+
+.hero-image {
+  max-width: 990px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 550px) {
+  .topbar img {
+    height: 25px;
+  }
+
+  .reg-btn, .login-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.3rem;
+  }
+
+  .login-box h1 {
+    font-size: 2rem;
+  }
+}
